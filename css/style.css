@@ -50,6 +50,22 @@ ul {
   height: auto;
 }
 
+/* Desktop Menu */
+.desktop-main-menu {
+  margin-right: 50px;
+}
+
+.desktop-main-menu ul {
+  display: flex;
+}
+
+.desktop-main-menu ul li {
+  position: relative;
+  margin-right: 20px;
+  padding-bottom: 2px;
+}
+
+
 /* temp hide mobile menu */
 .mobile-main-menu {
   display: none;
