@@ -223,6 +223,30 @@ footer ul li a:hover {
   color: #aaa;
 }
 
+/* Hamburger Menu */
+.hamburger {
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  z-index: 10;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: white;
+}
+
 /* Animations */
 
 @keyframes fadeInUp {
@@ -252,5 +276,64 @@ footer ul li a:hover {
   40% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+
+@media (max-width: 960px) {
+
+  /* Hide desktop menu */
+  .desktop-main-menu {
+    display: none;
+  }
+
+  /* Show main mobile items */
+  .mobile-only {
+    display: block;
+  }
+
+  .section-inner-center h3 {
+    font-size: 75px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-inner {
+    bottom: 75px;
+    left: 20px;
+  }
+
+  .section-inner h2 {
+    font-size: 40px;
+  }
+
+  footer ul li:first-child {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  footer ul li {
+    margin-right: 15px;
+  }
+
+  .logo {
+    width: 150px;
+    margin: auto;
+  }
+
+  .section-inner-center h3 {
+    font-size: 50px;
+  }
+
+  /* Stats */
+  .stats {
+    flex-direction: column;
+  }
+
+  .stats div {
+    margin-bottom: 20px;
   }
 }
