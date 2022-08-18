@@ -114,6 +114,13 @@ section {
   font-weight: 700;
   margin-bottom: 20px;
   animation: fadeInUp 0.5s ease-in-out 0.2s;
+  /* Stop from showing at start of animation */
+  animation-fill-mode: both;
+}
+
+.section-inner a {
+  animation: fadeInUp 0.5s ease-in-out 0.4s;
+  animation-fill-mode: both;
 }
 
 /* Background images */
@@ -162,9 +169,12 @@ section {
 @keyframes fadeInUp {
   0% {
     opacity: 0;
+    transform: translateY(140px);
+
   }
 
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
