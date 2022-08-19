@@ -393,6 +393,15 @@ footer ul li a:hover {
   text-transform: uppercase;
 }
 
+.stats div span {
+  font-size: 160px;
+}
+
+.stats div h4 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
 /* Animations */
 
 @keyframes fadeIn {
