@@ -19,7 +19,23 @@ function countUp() {
     const updateCounter = () => {
       // convert to a number using "+" could have used parseInt() instead
       const target = +counter.getAttribute("data-target");
+      // Get current counter value
+      const c = +counter.innerText;
+
+      // create an increment
+      const increment = target / 100;
+
+      // If counter is less than target, add increment
+      if (c < target) {
+        // Round up and set counter value
+        counter.innerText = `${Math.ceil(c + increment)}`;
+
+        setTimeout(updateCounter, 75);
+      } else {
+        counter.innerText = target;
+      }
     };
+    updateCounter();
   });
 }
 
